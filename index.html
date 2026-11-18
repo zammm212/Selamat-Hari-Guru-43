@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3efe7">
+  <title>Hari Guru</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="logo">Simpatig</></div>
+    <div class="top-label">TEACHER'S DAY · 2026</div>
+    <button class="nav-button" onclick="showPage('gallery')">
+      GALERI <span>↗</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HALAMAN PEMBUKA -->
+    <section class="page home-page active" id="home">
+      <div class="home-content">
+        <div class="home-kicker">
+          <span></span> 25 NOVEMBER 2026
+        </div>
+
+        <div class="home-title">
+          <div class="title-small">A DAY TO APPRECIATE</div>
+          <h1>Selamat<br>Hari <em>Guru</em></h1>
+        </div>
+
+        <div class="home-bottom">
+          <p>
+            Untuk setiap ilmu yang dibagikan,
+            setiap waktu yang diluangkan,
+            dan setiap hal yang telah diajarkan.
+            Terima kasih telah menjadi bagian
+            dari perjalanan kami.
+          </p>
+
+          <button class="explore-button" onclick="showPage('gallery')">
+            <span>JELAJAHI UCAPAN</span>
+            <span class="explore-arrow">↗</span>
+          </button>
+        </div>
+      </div>
+
+
+
+      <div class="home-footer">
+        <span>SMPN 43 JAKARTA</span>
+        <span>SEBUAH APRESIASI UNTUK PARA PENDIDIK</span>
+        <span>01 — 02</span>
+      </div>
+    </section>
+
+    <!-- HALAMAN GALERI -->
+    <section class="page gallery-page" id="galleryPage">
+      <div class="gallery-heading">
+        <div>
+          <div class="eyebrow">THE APPRECIATION ARCHIVE</div>
+          <h2>Words of<br><em>gratitude.</em></h2>
+        </div>
+        <p>Setiap kartu menyimpan ucapan dari kelas untuk guru </p>
+      </div>
+
+      <div class="gallery-toolbar">
+        <div class="result-count"><span id="visibleCount">50</span> UCAPAN</div>
+        <label class="search-wrap">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Cari nama atau kelas...">
+        </label>
+      </div>
+
+      <div class="gallery" id="gallery"></div>
+      <div class="empty-state" id="emptyState" hidden>Tidak ada ucapan ditemukan.</div>
+
+      <div class="gallery-footer">
+        <span>SMPN 43 JAKARTA · 2026</span>
+        <span>02 — 02</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- POPUP VIDEO -->
+  <div class="modal" id="videoModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+
+    <section class="modal-panel" role="dialog" aria-modal="true">
+      <div class="modal-top">
+        <div>
+          <div class="eyebrow">A MESSAGE FOR YOU</div>
+          <h2 id="modalTitle">From — To</h2>
+        </div>
+        <button class="close-button" id="closeModal">×</button>
+      </div>
+
+      <div class="video-frame">
+        <video id="modalVideo" controls playsinline></video>
+        <div class="video-placeholder" id="videoPlaceholder">
+          <div class="play-symbol">▶</div>
+          <p></p>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal-caption">
+        <span id="modalFrom"></span>
+        <span id="modalTo"></span>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
